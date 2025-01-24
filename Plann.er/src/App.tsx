@@ -53,6 +53,10 @@ function App() {
     event.currentTarget.reset();
   }
 
+  function removeEmailToInvite(email: string) {
+    setEmailsToInvite((state) => state.filter((stateEmail) => stateEmail !== email));
+  }
+
   return (
     <div className="w-full h-screen flex items-center justify-center bg-[url('./assets/bg.png')]  bg-center">
       <div className="max-w-3xl w-full px-6 text-center space-y-10">
@@ -161,8 +165,8 @@ function App() {
               {emailsToInvite.map((email) => (
                 <div className="py-1.5 px-2.5 rounded-md bg-zinc-800 flex items-center gap-2" key={email}>
                   <span className="text-zinc-300">{email}</span>
-                  <button type="button">
-                    <X className="size-5 text-zinc-400" />
+                  <button type="button" onClick={() => removeEmailToInvite(email)}>
+                    <X className="size-5 text-zinc-400"  />
                   </button>
                 </div>
               ))}
