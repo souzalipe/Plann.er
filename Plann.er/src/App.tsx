@@ -37,8 +37,20 @@ function App() {
     const data = new FormData(event.currentTarget)
     const email = data.get('email') as string;
 
+    if (!email) {
+      return
+    }
+
+    if(emailsToInvite.includes(email)) {
+      return (
+        alert('Este e-mail já foi adicionado')
+      )
+    }
+
 
     setEmailsToInvite((state) => [...state, email]);
+
+    event.currentTarget.reset();
   }
 
   return (
