@@ -7,6 +7,8 @@ import { InviteGuestsStep } from "./Steps/invite-guests-steps";
 import { DateRange } from "react-day-picker";
 import { api } from "../../lib/axios";
 
+import Logo from '../../assets/logo.svg';
+
 export function CreateTripPage() {
   const navigate = useNavigate()
   const [isGuestsInputOpen, setIsGuestsInputOpen] = useState(false)
@@ -111,7 +113,7 @@ export function CreateTripPage() {
     <div className="h-screen flex items-center justify-center bg-pattern bg-no-repeat bg-center">
       <div className="max-w-3xl w-full px-6 text-center space-y-10">
         <div className="flex flex-col items-center gap-3">
-          <img src="/logo.svg" alt="plann.er" />
+          <img src={Logo} alt="plann.er" />
           <p className="text-zinc-300 text-lg">
             Convide seus amigos e planeje sua próxima viagem!
           </p>
