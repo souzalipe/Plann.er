@@ -5,8 +5,8 @@ import { useNavigate } from "react-router-dom";
 
 import { InviteGuestsModal } from "./Invite-guests-modal";
 import { ConfirmeTripModal } from "./Confirme-Trip-Modal";
-import { DestinationAmdDateStep } from "../Steps/destination-amd-date-step";
-import { InviteGuestsSteps } from "../Steps/invite-guests-steps";
+import { DestinationAmdDateStep } from "./Steps/destination-amd-date-step";
+import { InviteGuestsSteps } from "./Steps/invite-guests-steps";
 
 function CreateTripPage() {
   const navigate = useNavigate();
