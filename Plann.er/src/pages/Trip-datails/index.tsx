@@ -1,6 +1,6 @@
 import { Plus } from "lucide-react";
 import { useState } from "react";
-import { CreateActiviteModal } from "./creaty-activite-modal";
+import { CreateActivityModal } from "./creaty-activite-modal";
 import { ImportantLinks } from "./important-links";
 import { Guests } from "./guests";
 import { Activities } from "./activites";
@@ -45,8 +45,8 @@ export function TripDetailsPage() {
       </main>
 
       {isCreateActivityModalOpen && (
-        <CreateActiviteModal 
-            closeCreateActibiteModal={closeCreateActivityModal}
+        <CreateActivityModal 
+          closeCreateActivityModal={closeCreateActivityModal}
         />
       )}
     </div>
